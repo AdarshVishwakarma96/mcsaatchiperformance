@@ -1,0 +1,115 @@
+.mcsservicesection {--per-view: 4;--gap: 38px;--nav-top: 16px;--nav-right: 0px;--nav-bottom: auto;--nav-left: auto;--nav-size: 44px;--nav-gap: 12px;--nav-border: #d9d9d9;--nav-color: #1f1f1f;position: relative;}
+.mcsservice-header {position: relative;display: flex;align-items: center;margin-bottom: 20px;padding-right: calc(var(--nav-size) * 2 + var(--nav-gap) + 16px);}
+
+
+
+/* ---------- navigation ---------- */
+.mcsservice-nav {
+  position: absolute;
+  top: var(--nav-top);
+  right: var(--nav-right);
+  bottom: var(--nav-bottom);
+  left: var(--nav-left);
+  display: flex;
+  gap: var(--nav-gap);
+  z-index: 2;
+}
+
+.mcsservice-nav-btn {
+  display: grid;
+  place-items: center;
+  width: var(--nav-size);
+  height: var(--nav-size);
+  padding: 0;
+  border: 1px solid var(--nav-border);
+  border-radius: 50%;
+  background: #fff;
+  color: #000000;
+  cursor: pointer;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.mcsservice-nav-btn:hover:not(:disabled) {border-color: #1f1f1f;}
+
+.mcsservice-nav-btn:focus-visible {outline: 2px solid #0b6bcb;outline-offset: 2px;}
+
+/* disabled state (left arrow on first slide, right arrow on last) */
+.mcsservice-nav-btn:disabled {opacity: 0.45;color: #9a9a9a;cursor: not-allowed;}
+
+/* ---------- slider ---------- */
+.mcsservice-viewport { overflow: hidden; touch-action: pan-y; cursor: grab; }
+
+.mcsservice-viewport:active {cursor: grabbing;}
+
+.mcsservice-track {
+  --index: 0; /* set by JS */
+  --drag: 0px; /* set by JS while swiping */
+  --slide-w: calc((100% - var(--gap) * (var(--per-view) - 1)) / var(--per-view));
+
+  display: flex;
+  gap: var(--gap);
+  transform: translateX(
+    calc(var(--index) * -1 * (var(--slide-w) + var(--gap)) + var(--drag))
+  );
+  transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.mcsservice-track.is-dragging {
+  transition: none;
+}
+
+.mcsservice-slide {
+  flex: 0 0 var(--slide-w);
+  min-width: 0;
+  user-select: none;
+}
+
+
+
+
+
+
+
+
+
+/* ==================================================================
+   RESPONSIVE
+   ================================================================== */
+
+/* ---------- TABLET: 2 slides ---------- */
+@media (max-width: 1023px) {
+  .mcsservicesection {
+    --per-view: 2;
+    --gap: 24px;
+    --nav-right: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+
+
+
+}
+
+/* ---------- MOBILE: 1 slide ---------- */
+@media (max-width: 639px) {
+  .mcsservicesection {
+    --per-view: 1;
+    --gap: 16px;
+    --nav-size: 36px;
+    --nav-gap: 8px;
+    --nav-top: 20px;
+    --nav-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mcsservice-header { margin-bottom: 24px; }
+
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mcsservice-track { transition: none; }
+}
