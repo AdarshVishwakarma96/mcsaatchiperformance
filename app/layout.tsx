@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
       card: "summary_large_image",
       title: "Home | M+C Saatchi Performance",
-      images: ["https://mcsaatchiperformance-nine.vercel.app/media/Open-Graph.webp"],
+      images: ["https://mcsaatchiperformance-nine.vercel.app/media/open-graph-social.png"],
     },
 };
 
