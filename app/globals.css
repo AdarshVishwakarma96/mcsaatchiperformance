@@ -306,13 +306,13 @@ footer{width: 100%;background-color: var(--african-turquoise-color);padding: 50p
 
 .thanksection{background-color: var(--full-white-color);}
 .thank-contents{text-align: center;}
-
 .thank-media{position: relative;width: 200px;height: 70px;display: inline-block;}
 .thank-media img{width: 100%;}
-
 .thank-contents h1{color: var(--african-turquoise-color);font: normal 600 50px / 1.3 var(--primary-font);text-transform: uppercase;}
 .thank-contents p{color: var(--african-turquoise-color);font: normal 400 16px / 1.1 var(--secondary-font);}
 
+
+#services, #ourwork, #clients, #faq, #awards, #resources, #contactus{scroll-margin-top: 80px !important;}
 
 
 @media only screen and (max-width: 1024px) {
