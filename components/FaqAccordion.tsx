@@ -36,6 +36,11 @@ const faqs: FaqItem[] = [
     answer:
       "We understand that some brands prefer to have complete visibility at every stage of the process, while others prefer to let us take the reins. You can have as much or as little involvement as you wish.",
   },
+  {
+    question: "What KPIs do you usually track with an influencer campaign?",
+    answer:
+      "The most common KPI would be post engagement, typically likes + comments + shares divided by views, and comparing the engagement rate against platform benchmarks. If there is a link provided (e.g. link in bio), we may also be able to track conversions and measure the efficiency of each post. With paid media, we can also track impressions, clicks, view-through rate, and conversions. Brand lift studies can also be secured if awareness is the KPI.",
+  },
 ];
 
 type PlusMinusIconProps = {
