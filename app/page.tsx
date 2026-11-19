@@ -1,9 +1,42 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Services from "../components/services/Services";
 import OurClients from "../components/OurClients/OurClients";
 import Resources from "../components/Resources/Resources";
 import FaqAccordion from "@/components/FaqAccordion";
 import AwardsGrid from "@/components/AwardsGrid/AwardsGrid";
+
+export const metadata: Metadata = {
+  title: "M+C Saatchi Performance | Global Growth Marketing Agency",
+  description: "A global growth marketing agency for digital and app brands. Performance marketing, search, SEO, GEO and analytics built for measurable ROI since 2006",
+  alternates: {
+    canonical: "https://mcsaatchiperformance-nine.vercel.app/",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: "Home | M+C Saatchi Performance",
+    description: "A global growth marketing agency for digital and app brands. Performance marketing, search, SEO, GEO and analytics built for measurable ROI since 2006",
+    url: "https://mcsaatchiperformance-nine.vercel.app/",
+    siteName: "M+C Saatchi Performance",
+    images: [
+      {
+        url: "https://mcsaatchiperformance-nine.vercel.app/media/open-graph-social.png",
+        width: 1200,
+        height: 630,
+        alt: "M+C Saatchi Performance Home",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+      card: "summary_large_image",
+      title: "Home | M+C Saatchi Performance",
+      images: ["https://mcsaatchiperformance-nine.vercel.app/media/open-graph-social.png"],
+    },
+};
 
 export default function Home() {
   return (
@@ -18,7 +51,7 @@ export default function Home() {
               <h2>The growth marketing agency</h2>
               <h3>for digitally-driven brands</h3>
               <p>We work at the frontiers of media, marketing and technology to maximise marketing ROI. Our approach involves meticulous media planning and buying across digital channels leveraging the reach of paid search & social, programmatic advertising, influencer marketing, streaming platforms, affiliates and more.</p>
-              <a href="#" title="Talk To Us">Talk to us</a>
+              <a href="#contactus" title="Talk To Us">Talk to us</a>
             </div>
           </div>
         </div>
@@ -39,7 +72,7 @@ export default function Home() {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
             <div className="our-work-media">
-              <Image src="/media/Our-Work-Art-Media-Img.webp" alt="MC Saathi Works" fill />
+              <Image src="/media/Our-Work-Art-Media-Img.webp" alt="M+C Saatchi Performance Works" fill />
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -144,6 +177,12 @@ export default function Home() {
                 <div className="form-field">
                   <label htmlFor="formmessage">Can you give us some more detail?</label>
                   <textarea id="formmessage" name="formmessage" placeholder="Enter more detail"></textarea>
+                </div>
+                <div className="form-field">
+                  <div className="form-msg">
+                    <p>Error</p>
+                    <p>Form sbumitted succesfull</p>
+                  </div>
                 </div>
                 <div className="form-field">
                   <button type="submit" title="Submit">Submit</button>

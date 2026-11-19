@@ -18,16 +18,16 @@ const LOGO = {
 };
 
 const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "#home", id: "home" },
-  { label: "Services", href: "#services", id: "services" },
-  { label: "Our Work", href: "#ourwork", id: "ourwork" },
-  { label: "Our Clients", href: "#clients", id: "clients" },
-  { label: "FAQs", href: "#faq", id: "faq" },
-  { label: "Awards", href: "#awards", id: "awards" },
-  { label: "Resources", href: "#resources", id: "resources" },
+  { label: "Home", href: ".", id: "home" },
+  { label: "Services", href: "/#services", id: "services" },
+  { label: "Our Work", href: "/#ourwork", id: "ourwork" },
+  { label: "Our Clients", href: "/#clients", id: "clients" },
+  { label: "FAQs", href: "/#faq", id: "faq" },
+  { label: "Awards", href: "/#awards", id: "awards" },
+  { label: "Resources", href: "/#resources", id: "resources" },
 ];
 
-const CTA = { label: "Talk to us", href: "#contactus" };
+const CTA = { label: "Talk to us", href: "/#contactus" };
 
 export default function MCSHeaderNav() {
   const [open, setOpen] = useState<boolean>(false);
@@ -78,7 +78,7 @@ export default function MCSHeaderNav() {
     <>
     <header className="mcs-header-nav">
         <div className="mcs-header-nav-inner">
-          <Link href="#home" className="mcs-header-nav-logo" onClick={closeMenu} >
+          <Link href="." className="mcs-header-nav-logo" onClick={closeMenu} >
             <img className="mcs-header-nav-logo-img" src={LOGO.src} alt={LOGO.alt} width={LOGO.width} height={LOGO.height} />
           </Link>
 
