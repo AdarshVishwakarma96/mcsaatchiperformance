@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "M+C Saatchi Performance",
     images: [
       {
-        url: "https://mcsaatchiperformance-nine.vercel.app/media/Open-Graph.webp",
+        url: "https://mcsaatchiperformance-nine.vercel.app/media/open-graph-social.png",
         width: 1200,
         height: 630,
         alt: "M+C Saatchi Performance Home",
