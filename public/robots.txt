@@ -1,4 +1,4 @@
-Sitemap: https://pixilink.co/sitemap.xml
+Sitemap: https://mcsaatchiperformance-nine.vercel.app/sitemap.xml
 
 User-agent: *
 Allow: /
