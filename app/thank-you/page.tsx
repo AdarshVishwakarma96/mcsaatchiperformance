@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Thank you | M+C Saatchi Performance",
+  title: "Thank You for Contacting M+C Saatchi Performance | Enquiry Received",
   description: "Thank you for contacting M+C Saatchi Performance. We've received your enquiry and our team will be in touch with you shortly.",
   alternates: {
     canonical: "https://mcsaatchiperformance-nine.vercel.app/thank-you",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     follow: false,
   },
   openGraph: {
-    title: "Thank You | M+C Saatchi Performance",
+    title: "Thank You for Contacting M+C Saatchi Performance | Enquiry Received",
     description: "Thank you for contacting M+C Saatchi Performance. We've received your enquiry and our team will be in touch with you shortly.",
     url: "https://mcsaatchiperformance-nine.vercel.app/thank-you",
     siteName: "M+C Saatchi Performance",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
       card: "summary_large_image",
-      title: "THank You | M+C Saatchi Performance",
+      title: "Thank You for Contacting M+C Saatchi Performance | Enquiry Received",
       images: ["https://mcsaatchiperformance-nine.vercel.app/media/open-graph-social.png"],
     },
 };
