@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Home | M+C Saatchi Performance",
-    description: "PixiLink subscriptions never auto-renew and you're never charged automatically. Learn how payments, renewals and refunds work for Pro plans.",
+    description: "A global growth marketing agency for digital and app brands. Performance marketing, search, SEO, GEO and analytics built for measurable ROI since 2006",
     url: "https://mcsaatchiperformance-nine.vercel.app/",
-    siteName: "PixiLink",
+    siteName: "M+C Saatchi Performance",
     images: [
       {
         url: "https://mcsaatchiperformance-nine.vercel.app/media/Open-Graph.webp",

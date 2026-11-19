@@ -1,0 +1,4 @@
+Sitemap: https://pixilink.co/sitemap.xml
+
+User-agent: *
+Allow: /
