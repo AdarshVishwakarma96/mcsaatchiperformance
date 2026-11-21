@@ -35,11 +35,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 j.async=true;
                 j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
                 f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-THZ7SMTN');
+              })(window,document,'script','dataLayer','GTM-PV2HKFVJ');
             `,  }} />
         {/* Google Tag Manager (noscript) */}
         <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THZ7SMTN" height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV2HKFVJ" height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
         </noscript>
         <Header />
         {children}
