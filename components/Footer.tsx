@@ -13,6 +13,21 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="row">
+            <div className="col-lg-4 col-md-5 col-sm-12 col-12">
+                <div className="subscribe-title">
+                    <h4>Subscribe To Our Newsletter!</h4>
+                </div>
+                <div className="subscribe-form">
+                    <form autoComplete="off">
+                        <div className="subscribe-form-field">
+                            <input type="email" id="subformemail" name="subformemail" placeholder="Enter your Email Address" required  />
+                            <button type="submit" title="Submit"><i className="bi bi-arrow-right-circle-fill"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div className="row">
             <div className="col-lg-5 col-md-5 col-sm-12 col-12">
                 <div className="footer-links footer-links-dis">
                     <h5>What We Do</h5>
