@@ -137,6 +137,21 @@ const faqSchema = {
 };
 
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization",
+  "name": "M+C Saatchi Performance",
+  "url": "https://mcsaatchiperformance-nine.vercel.app/",
+  "description": "M+C Saatchi Performance is a global growth marketing agency for digitally-driven brands, offering performance marketing, paid search, paid social, programmatic advertising, app marketing and SEO services.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://cdn-ilellnp.nitrocdn.com/DVoHflVnJQHYOqexcWVIsCcCJdgJBITv/assets/images/optimized/rev-b7a65ae/www.mcsaatchiperformance.com/wp-content/themes/mandcsaatchiperformance/assets/img/logo-upright-246x0.png"
+  }
+};
+
+
+
 export default function Home() {
   return (
     <>
@@ -154,6 +169,15 @@ export default function Home() {
     __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c")
   }}
 />
+
+{/* Organization Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c")
+        }}
+      />
+
 
 
     <main>
