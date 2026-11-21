@@ -233,7 +233,7 @@ export default function Home() {
               <p>We don’t just assume it, we test and learn, optimizing campaigns only based on what’s driving performance.</p>
               {/* <a href="#" title="View Our Work">View Our Work</a> */}
               <TrackedLink
-  href="https://www.mcsaatchiperformance.com/case-studies/"
+  href="#services"
   title="View Our Work"
   className="btn-secondary"
   buttonName="View Our Work"
