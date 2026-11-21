@@ -217,10 +217,12 @@ The reports should compare the original live website with the updated Vercel dep
 
 - Original Website: 
 https://pagespeed.web.dev/analysis/https-www-mcsaatchiperformance-com/kip0ohhb3f?form_factor=desktop
+
 https://pagespeed.web.dev/analysis/https-www-mcsaatchiperformance-com/kip0ohhb3f?form_factor=mobile
 
 - Updated Vercel Website: 
 https://pagespeed.web.dev/analysis/https-mcsaatchiperformance-nine-vercel-app/eq1olqaumc?form_factor=desktop
+
 https://pagespeed.web.dev/analysis/https-mcsaatchiperformance-nine-vercel-app/eq1olqaumc?form_factor=mobile
 
 *Performance scores may vary depending on network conditions, device configuration, and testing environment.*
