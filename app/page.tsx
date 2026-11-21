@@ -178,12 +178,12 @@ export default function Home() {
                   <label htmlFor="formmessage">Can you give us some more detail?</label>
                   <textarea id="formmessage" name="formmessage" placeholder="Enter more detail"></textarea>
                 </div>
-                <div className="form-field">
+                {/* <div className="form-field">
                   <div className="form-msg">
                     <p>Error</p>
                     <p>Form sbumitted succesfull</p>
                   </div>
-                </div>
+                </div> */}
                 <div className="form-field">
                   <button type="submit" title="Submit">Submit</button>
                 </div>
