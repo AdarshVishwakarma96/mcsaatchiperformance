@@ -46,40 +46,49 @@ export const metadata: Metadata = {
 };
 
 
-const schemaData = {
+const organizationSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization",
-      "name": "M+C Saatchi Performance",
-      "url": "https://mcsaatchiperformance-nine.vercel.app/"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://mcsaatchiperformance-nine.vercel.app/#website",
-      "url": "https://mcsaatchiperformance-nine.vercel.app/",
-      "name": "M+C Saatchi Performance",
-      "publisher": {
-        "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization"
-      },
-      "inLanguage": "en"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://mcsaatchiperformance-nine.vercel.app/#webpage",
-      "url": "https://mcsaatchiperformance-nine.vercel.app/",
-      "name": "M+C Saatchi Performance | Global Growth Marketing Agency",
-      "isPartOf": {
-        "@id": "https://mcsaatchiperformance-nine.vercel.app/#website"
-      },
-      "about": {
-        "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization"
-      },
-      "inLanguage": "en"
-    }
-  ]
+  "@type": "Organization",
+  "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization",
+  "name": "M+C Saatchi Performance",
+  "url": "https://mcsaatchiperformance-nine.vercel.app/",
+  "description": "A global growth marketing agency for digitally-driven brands, offering performance marketing, paid search, paid social, programmatic advertising and app marketing.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://cdn-ilellnp.nitrocdn.com/DVoHflVnJQHYOqexcWVIsCcCJdgJBITv/assets/images/optimized/rev-b7a65ae/www.mcsaatchiperformance.com/wp-content/themes/mandcsaatchiperformance/assets/img/logo-upright-246x0.png"
+  }
 };
+
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://mcsaatchiperformance-nine.vercel.app/#website",
+  "url": "https://mcsaatchiperformance-nine.vercel.app/",
+  "name": "M+C Saatchi Performance",
+  "publisher": {
+    "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization"
+  },
+  "inLanguage": "en"
+};
+
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://mcsaatchiperformance-nine.vercel.app/#webpage",
+  "url": "https://mcsaatchiperformance-nine.vercel.app/",
+  "name": "M+C Saatchi Performance | Global Growth Marketing Agency",
+  "description": "A global growth marketing agency for digitally-driven brands. Discover performance marketing, paid search, paid social, programmatic advertising and app marketing services.",
+  "isPartOf": {
+    "@id": "https://mcsaatchiperformance-nine.vercel.app/#website"
+  },
+  "about": {
+    "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization"
+  },
+  "inLanguage": "en"
+};
+
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -137,48 +146,45 @@ const faqSchema = {
 };
 
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization",
-  "name": "M+C Saatchi Performance",
-  "url": "https://mcsaatchiperformance-nine.vercel.app/",
-  "description": "M+C Saatchi Performance is a global growth marketing agency for digitally-driven brands, offering performance marketing, paid search, paid social, programmatic advertising, app marketing and SEO services.",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://cdn-ilellnp.nitrocdn.com/DVoHflVnJQHYOqexcWVIsCcCJdgJBITv/assets/images/optimized/rev-b7a65ae/www.mcsaatchiperformance.com/wp-content/themes/mandcsaatchiperformance/assets/img/logo-upright-246x0.png"
-  }
-};
-
-
 
 export default function Home() {
   return (
     <>
-    {/* Structured Data - Schema Markup */}
+    {/* Organization Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schemaData).replace(/</g, "\\u003c")
+          __html: JSON.stringify(organizationSchema)
+            .replace(/</g, "\\u003c")
         }}
       />
 
-      <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c")
-  }}
-/>
-
-{/* Organization Schema */}
+      {/* WebSite Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c")
+          __html: JSON.stringify(websiteSchema)
+            .replace(/</g, "\\u003c")
         }}
       />
 
+      {/* WebPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webpageSchema)
+            .replace(/</g, "\\u003c")
+        }}
+      />
 
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema)
+            .replace(/</g, "\\u003c")
+        }}
+      />
 
     <main>
     <section id="home" className="bannersection">
