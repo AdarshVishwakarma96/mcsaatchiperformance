@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     canonical: "https://mcsaatchiperformance-nine.vercel.app/",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   openGraph: {
     title: "Home | M+C Saatchi Performance",
