@@ -57,7 +57,6 @@ function PlusMinusIcon({ open }: PlusMinusIconProps) {
 }
 
 export default function FaqAccordion() {
-  // First item is open by default
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (i: number) =>

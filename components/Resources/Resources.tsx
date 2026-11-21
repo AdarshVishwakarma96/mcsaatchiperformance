@@ -1,9 +1,8 @@
-"use client"; // needed for the Next.js App Router
+"use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { KeyboardEvent, PointerEvent } from "react";
 import "./ResourcesStyle.css";
-
 
 type Slide = {
   id: number;
@@ -68,7 +67,6 @@ export default function ResourcesSliders({
 
   const maxIndex = Math.max(0, slides.length - perView);
 
-  /* Slides per view is defined in style.css (--per-view per breakpoint). JS only reads it, so you never edit numbers in this file. */
   useEffect(() => {
     const readPerView = () => {
       if (!trackRef.current) return;
@@ -80,12 +78,10 @@ export default function ResourcesSliders({
     return () => window.removeEventListener("resize", readPerView);
   }, []);
 
-  /* keep index valid when the screen size changes */
   useEffect(() => {
     setIndex((i) => Math.min(i, maxIndex));
   }, [maxIndex]);
 
-  /* push the current slide index to CSS */
   useEffect(() => {
     trackRef.current?.style.setProperty("--index", String(index));
   }, [index]);
@@ -96,7 +92,6 @@ export default function ResourcesSliders({
     [maxIndex]
   );
 
-  /* swipe / drag */
   const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
     startX.current = e.clientX;
     dragX.current = 0;
@@ -130,7 +125,6 @@ export default function ResourcesSliders({
           <div className="col-12">
             <div className="mcsresources-header">
               <h2 className="mcsresources-heading">{title}</h2>
-              
               <div className="mcsresources-nav">
                 <button type="button" className="mcsresources-nav-btn mcsresources-nav-prev" onClick={prev} disabled={index === 0} aria-label="Previous slide">
                   <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -150,7 +144,7 @@ export default function ResourcesSliders({
                 {slides.map((s) => (
                   <article className="mcsresources-slide" key={s.id}>
                     <div className="mcsresources-image">
-                      <img src={s.image} alt={s.title} draggable={false} />
+                      <img src={s.image} alt={s.title} draggable={false} loading="lazy" />
                     </div>
                     <p className="mcsresources-card-text">{s.text}</p>
                     <h3 className="mcsresources-card-title">{s.title}</h3>

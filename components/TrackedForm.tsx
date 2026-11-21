@@ -1,6 +1,5 @@
 
 "use client";
-
 import { useRef } from "react";
 import { trackEvent } from "./tracking";
 import type {
@@ -23,7 +22,6 @@ export default function TrackedForm({
 }: TrackedFormProps) {
   const formStarted = useRef(false);
 
-  // Track first interaction with the form
   const handleFocus = (event: FocusEvent<HTMLFormElement>) => {
     if (!formStarted.current) {
       formStarted.current = true;
@@ -34,23 +32,17 @@ export default function TrackedForm({
         page_name: "Home",
       });
     }
-
     onFocusCapture?.(event);
   };
 
-  // Track submission only after validation succeeds
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const form = event.currentTarget;
-
-    // Check all required fields
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
-    // Push successful validation event to dataLayer
     trackEvent("form_submit", {
       form_name: formName,
       form_location: formLocation,
@@ -58,7 +50,6 @@ export default function TrackedForm({
       submission_status: "success",
     });
 
-    // Redirect to Thank You page
     window.location.href = "/thank-you";
   };
 

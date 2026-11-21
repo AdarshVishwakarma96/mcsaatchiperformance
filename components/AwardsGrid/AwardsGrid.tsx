@@ -21,7 +21,7 @@ export default function AwardsGrid() {
         {awards.map((award) => (
           <li className="mcs-awards-item" key={award.src}>
             <a className="mcs-awards-link" href={award.href} target="_blank" rel="noopener noreferrer" >
-              <img className="mcs-awards-logo" src={award.src} alt={award.alt} width={260} height={200} />
+              <img className="mcs-awards-logo" src={award.src} alt={award.alt} width={260} height={200} loading="lazy" />
             </a>
           </li>
         ))}

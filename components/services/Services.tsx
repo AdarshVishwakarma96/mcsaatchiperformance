@@ -1,9 +1,8 @@
-"use client"; // needed for the Next.js App Router
+"use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { KeyboardEvent, PointerEvent } from "react";
 import "./ServicesStyle.css";
-
 
 type Slide = {
   id: number;
@@ -116,8 +115,6 @@ export default function ServicesSliders({
 
   const maxIndex = Math.max(0, slides.length - perView);
 
-  /* Slides per view is defined in style.css (--per-view per breakpoint).
-     JS only reads it, so you never edit numbers in this file. */
   useEffect(() => {
     const readPerView = () => {
       if (!trackRef.current) return;
@@ -129,12 +126,10 @@ export default function ServicesSliders({
     return () => window.removeEventListener("resize", readPerView);
   }, []);
 
-  /* keep index valid when the screen size changes */
   useEffect(() => {
     setIndex((i) => Math.min(i, maxIndex));
   }, [maxIndex]);
 
-  /* push the current slide index to CSS */
   useEffect(() => {
     trackRef.current?.style.setProperty("--index", String(index));
   }, [index]);
@@ -145,7 +140,6 @@ export default function ServicesSliders({
     [maxIndex]
   );
 
-  /* swipe / drag */
   const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
     startX.current = e.clientX;
     dragX.current = 0;
@@ -199,7 +193,7 @@ export default function ServicesSliders({
                 {slides.map((s) => (
                   <article className="mcsservice-slide" key={s.id}>
                     <div className="mcsservice-image">
-                      <img src={s.image} alt={s.title} draggable={false} />
+                      <img src={s.image} alt={s.title} draggable={false} loading="lazy" />
                     </div>
                     <h3 className="mcsservice-card-title">{s.title}</h3>
                     <p className="mcsservice-card-text">{s.text}</p>

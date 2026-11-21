@@ -79,7 +79,7 @@ export default function MCSHeaderNav() {
     <header className="mcs-header-nav">
         <div className="mcs-header-nav-inner">
           <Link href="." className="mcs-header-nav-logo" onClick={closeMenu} >
-            <img className="mcs-header-nav-logo-img" src={LOGO.src} alt={LOGO.alt} width={LOGO.width} height={LOGO.height} />
+            <img className="mcs-header-nav-logo-img" src={LOGO.src} alt={LOGO.alt} width={LOGO.width} height={LOGO.height} loading="lazy" />
           </Link>
 
           <nav className="mcs-header-nav-links" aria-label="Primary">

@@ -199,11 +199,7 @@ export default function Home() {
               <h3>for digitally-driven brands</h3>
               <p>We work at the frontiers of media, marketing and technology to maximise marketing ROI. Our approach involves meticulous media planning and buying across digital channels leveraging the reach of paid search & social, programmatic advertising, influencer marketing, streaming platforms, affiliates and more.</p>
               {/* <a href="#contactus" title="Talk To Us">Talk to us</a> */}
-              <TrackedLink href="#contactus"
-  title="Get Started"
-  className="btn-primary"
-  buttonName="Get Started"
-  buttonLocation="Hero">Talk to us</TrackedLink>
+              <TrackedLink href="#contactus" title="Get Started" className="btn-primary" buttonName="Get Started" buttonLocation="Hero">Talk to us</TrackedLink>
             </div>
           </div>
         </div>
@@ -224,7 +220,7 @@ export default function Home() {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
             <div className="our-work-media">
-              <Image src="/media/Our-Work-Art-Media-Img.webp" alt="M+C Saatchi Performance Works" fill />
+              <Image src="/media/Our-Work-Art-Media-Img.webp" alt="M+C Saatchi Performance Works" fill loading="lazy" />
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -233,15 +229,7 @@ export default function Home() {
               <p>The measurable nature of performance marketing enables marketers to understand and maximise the return on their advertising investment.</p>
               <p>We don’t just assume it, we test and learn, optimizing campaigns only based on what’s driving performance.</p>
               {/* <a href="#" title="View Our Work">View Our Work</a> */}
-              <TrackedLink
-  href="#services"
-  title="View Our Work"
-  className="btn-secondary"
-  buttonName="View Our Work"
-  buttonLocation="Our Work Section"
->
-  View Our Work
-</TrackedLink>
+              <TrackedLink href="#services" title="View Our Work" className="btn-secondary" buttonName="View Our Work" buttonLocation="Our Work Section">View Our Work</TrackedLink>
             </div>
           </div>
         </div>
@@ -308,134 +296,47 @@ export default function Home() {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
             <div className="contact-form">
-              {/* <form autoComplete="off">
-                <div className="form-field">
-                  <label htmlFor="formname">Name</label>
-                  <input type="text" id="formname" name="formname" placeholder="Enter your Name" />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="formemail">Email</label>
-                  <input type="email" id="formemail" name="formemail" placeholder="Enter your Email Address" />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="formphone">Phone number</label>
-                  <input type="tel" id="formphone" name="formphone" placeholder="Enter your Phone number" />
-                </div>
-                <div className="form-field">
-                  <label htmlFor="formservice">I'd like to talk about</label>
-                  <select id="formservice" name="formservice">
-                    <option value="">Please Select</option>
-                    <option value="App Store Optimisation">App Store Optimisation</option>
-                    <option value="Performance Media">Performance Media</option>
-                    <option value="Ecommerce/Retail Media">eCommerce / Retail Media &amp; Quick Commerce</option>
-                    <option value="Measurement / OneView / MMM &amp; Incrementality">Measurement / OneView / MMM &amp; Incrementality</option>
-                    <option value="AEO / SEO / GEO">AEO / SEO / GEO</option>
-                    <option value="Media Partnerships">Media Partnerships</option>
-                    <option value="Careers">Careers</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div className="form-field">
-                  <label htmlFor="formmessage">Can you give us some more detail?</label>
-                  <textarea id="formmessage" name="formmessage" placeholder="Enter more detail"></textarea>
-                </div>
-                {/* <div className="form-field">
-                  <div className="form-msg">
-                    <p>Error</p>
-                    <p>Form sbumitted succesfull</p>
-                  </div>
-                </div> *
-                <div className="form-field">
-                  <button type="submit" title="Submit">Submit</button>
-                </div>
-              </form> */}
-
-
-<TrackedForm
-  autoComplete="off"
-  formName="Contact Form"
-  formLocation="Contact Section"
->
-  <div className="form-field">
-    <label htmlFor="formname">Name</label>
-    <input
-      type="text"
-      id="formname"
-      name="formname"
-      placeholder="Enter your Name"
-      required
-    />
-  </div>
-
-  <div className="form-field">
-    <label htmlFor="formemail">Email</label>
-    <input
-      type="email"
-      id="formemail"
-      name="formemail"
-      placeholder="Enter your Email Address"
-      required
-    />
-  </div>
-
-  <div className="form-field">
-    <label htmlFor="formphone">Phone number</label>
-    <input
-      type="tel"
-      id="formphone"
-      name="formphone"
-      placeholder="Enter your Phone number"
-      required
-    />
-  </div>
-
-  <div className="form-field">
-    <label htmlFor="formservice">I'd like to talk about</label>
-    <select
-      id="formservice"
-      name="formservice"
-      required
-      defaultValue=""
-    >
-      <option value="">Please Select</option>
-      <option value="App Store Optimisation">App Store Optimisation</option>
-      <option value="Performance Media">Performance Media</option>
-      <option value="Ecommerce/Retail Media">eCommerce / Retail Media &amp; Quick Commerce</option>
-      <option value="Measurement / OneView / MMM &amp; Incrementality">Measurement / OneView / MMM &amp; Incrementality</option>
-      <option value="AEO / SEO / GEO">AEO / SEO / GEO</option>
-      <option value="Media Partnerships">Media Partnerships</option>
-      <option value="Careers">Careers</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-
-  <div className="form-field">
-    <label htmlFor="formmessage">
-      Can you give us some more detail?
-    </label>
-    <textarea
-      id="formmessage"
-      name="formmessage"
-      placeholder="Enter more detail"
-      required
-    />
-  </div>
-
-  <div className="form-field">
-    <button type="submit" title="Submit">
-      Submit
-    </button>
-  </div>
-</TrackedForm>
-
+              <TrackedForm autoComplete="off" formName="Contact Form" formLocation="Contact Section">
+              <div className="form-field">
+                <label htmlFor="formname">Name</label>
+                <input type="text" id="formname" name="formname" placeholder="Enter your Name" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="formemail">Email</label>
+                <input type="email" id="formemail" name="formemail" placeholder="Enter your Email Address" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="formphone">Phone number</label>
+                <input type="tel" id="formphone" name="formphone" placeholder="Enter your Phone number" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="formservice">I'd like to talk about</label>
+                <select id="formservice" name="formservice" required defaultValue="" >
+                  <option value="">Please Select</option>
+                  <option value="App Store Optimisation">App Store Optimisation</option>
+                  <option value="Performance Media">Performance Media</option>
+                  <option value="Ecommerce/Retail Media">eCommerce / Retail Media &amp; Quick Commerce</option>
+                  <option value="Measurement / OneView / MMM &amp; Incrementality">Measurement / OneView / MMM &amp; Incrementality</option>
+                  <option value="AEO / SEO / GEO">AEO / SEO / GEO</option>
+                  <option value="Media Partnerships">Media Partnerships</option>
+                  <option value="Careers">Careers</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div className="form-field">
+                <label htmlFor="formmessage">Can you give us some more detail?</label>
+                <textarea id="formmessage" name="formmessage" placeholder="Enter more detail" required />
+              </div>
+              <div className="form-field">
+                <button type="submit" title="Submit">Submit</button>
+              </div>
+             </TrackedForm>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     </main>
-
 </>
 
   );
