@@ -198,7 +198,7 @@ export default function Home() {
               <h3>for digitally-driven brands</h3>
               <p>We work at the frontiers of media, marketing and technology to maximise marketing ROI. Our approach involves meticulous media planning and buying across digital channels leveraging the reach of paid search & social, programmatic advertising, influencer marketing, streaming platforms, affiliates and more.</p>
               {/* <a href="#contactus" title="Talk To Us">Talk to us</a> */}
-              <TrackedLink href="#contact"
+              <TrackedLink href="#contactus"
   title="Get Started"
   className="btn-primary"
   buttonName="Get Started"
@@ -237,7 +237,7 @@ export default function Home() {
   title="View Our Work"
   className="btn-secondary"
   buttonName="View Our Work"
-  buttonLocation="About Section"
+  buttonLocation="Our Work Section"
 >
   View Our Work
 </TrackedLink>
