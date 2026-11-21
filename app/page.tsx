@@ -5,6 +5,7 @@ import OurClients from "../components/OurClients/OurClients";
 import Resources from "../components/Resources/Resources";
 import FaqAccordion from "@/components/FaqAccordion";
 import AwardsGrid from "@/components/AwardsGrid/AwardsGrid";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "M+C Saatchi Performance | Global Growth Marketing Agency",
@@ -196,7 +197,12 @@ export default function Home() {
               <h2>The growth marketing agency</h2>
               <h3>for digitally-driven brands</h3>
               <p>We work at the frontiers of media, marketing and technology to maximise marketing ROI. Our approach involves meticulous media planning and buying across digital channels leveraging the reach of paid search & social, programmatic advertising, influencer marketing, streaming platforms, affiliates and more.</p>
-              <a href="#contactus" title="Talk To Us">Talk to us</a>
+              {/* <a href="#contactus" title="Talk To Us">Talk to us</a> */}
+              <TrackedLink href="#contact"
+  title="Get Started"
+  className="btn-primary"
+  buttonName="Get Started"
+  buttonLocation="Hero">Talk to us</TrackedLink>
             </div>
           </div>
         </div>
@@ -225,7 +231,16 @@ export default function Home() {
               <h3><span>Measurement</span> is at the core of what we do</h3>
               <p>The measurable nature of performance marketing enables marketers to understand and maximise the return on their advertising investment.</p>
               <p>We don’t just assume it, we test and learn, optimizing campaigns only based on what’s driving performance.</p>
-              <a href="#" title="View Our Work">View Our Work</a>
+              {/* <a href="#" title="View Our Work">View Our Work</a> */}
+              <TrackedLink
+  href="https://www.mcsaatchiperformance.com/case-studies/"
+  title="View Our Work"
+  className="btn-secondary"
+  buttonName="View Our Work"
+  buttonLocation="About Section"
+>
+  View Our Work
+</TrackedLink>
             </div>
           </div>
         </div>
