@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { TextWidget } from '@livechat/widget-react'
 
 import Link from "next/link";
 
@@ -8,6 +9,7 @@ export default function Footer() {
 
   return (
     <>
+    <TextWidget organizationId="39069bb6-8d3b-4c26-abb8-7bb369961d08" />
     <footer>
       <div className="container">
         <div className="row">
