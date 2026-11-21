@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1
+    }
   },
   openGraph: {
     title: "Home | M+C Saatchi Performance",
@@ -38,9 +45,117 @@ export const metadata: Metadata = {
     },
 };
 
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization",
+      "name": "M+C Saatchi Performance",
+      "url": "https://mcsaatchiperformance-nine.vercel.app/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mcsaatchiperformance-nine.vercel.app/#website",
+      "url": "https://mcsaatchiperformance-nine.vercel.app/",
+      "name": "M+C Saatchi Performance",
+      "publisher": {
+        "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mcsaatchiperformance-nine.vercel.app/#webpage",
+      "url": "https://mcsaatchiperformance-nine.vercel.app/",
+      "name": "M+C Saatchi Performance | Global Growth Marketing Agency",
+      "isPartOf": {
+        "@id": "https://mcsaatchiperformance-nine.vercel.app/#website"
+      },
+      "about": {
+        "@id": "https://mcsaatchiperformance-nine.vercel.app/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why should you work with M+C Saatchi Performance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our agency has proven experience driving search engine marketing campaigns for global brands. We are an award-winning media agency with a wealth of knowledge in providing effective, targeted, data-driven campaigns for our clients. Our focus is on your success."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why choose us as your Media Buying & Planning Agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Media planning and buying is a complex and competitive landscape. The digital age means that consumers have multiple sources of media at their fingertips, and brands want to get in on the action. In this oversaturated market, competition for advertising real estate is fierce. By choosing M+C Saatchi Performance, you’ll not only benefit from our strong relationships with key platforms and channels, but our seasoned team of experts. We know exactly where to place your ad for the greatest engagement, increased conversion, and a boost in your brand awareness. Partner with us to discover how an effective omnichannel media planning & buying strategy could benefit your brand and amplify engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do brands really need to optimize for ChatGPT and Perplexity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your audience uses AI tools to research, compare, or understand their options, then optimising for platforms like ChatGPT, Perplexity, Gemini, Claude, Microsoft Copilot, Grok and other LLM tools is essential. AI engines increasingly act as decision‑assistants, not just search tools. LLMs generate a single answer and selectively cite a small number of sources they trust. If your brand isn’t one of those sources, you may not appear at all, even if you rank well in traditional search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see results from SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO typically shows steady, meaningful improvement in 8–12 weeks, depending on your site’s baseline, competition, and how fast changes are implemented. Technical fixes can move quickly; authority-building and content improvements compound over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much involvement in the ASO process should we have as a brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We understand that some brands prefer to have complete visibility at every stage of the process, while others prefer to let us take the reins. You can have as much or as little involvement as you wish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What KPIs do you usually track with an influencer campaign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common KPI would be post engagement, typically likes + comments + shares divided by views, and comparing the engagement rate against platform benchmarks. If there is a link provided (e.g. link in bio), we may also be able to track conversions and measure the efficiency of each post. With paid media, we can also track impressions, clicks, view-through rate, and conversions. Brand lift studies can also be secured if awareness is the KPI."
+      }
+    }
+  ]
+};
+
+
 export default function Home() {
   return (
     <>
+    {/* Structured Data - Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemaData).replace(/</g, "\\u003c")
+        }}
+      />
+
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c")
+  }}
+/>
+
+
     <main>
     <section id="home" className="bannersection">
       <div className="container">
